@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>color name</title>
+</head>
+<body>
+
+    <input type="text" id="color">
+
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="colorname.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+        $("#color").keyup(function() {
+            $("body").css('background-color', parseColor($("#color").val()));
+            log($("body").css('background-color'));
+        });
+    });
+    </script>
+</body>
+</html>
