@@ -30,8 +30,10 @@
       <section>
         <h3>
 <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+    
+    <input type="text" id="color">
+    
+    
 
 <pre><code>$ cd your_repo_root/repo_name
 $ git fetch origin
@@ -66,6 +68,16 @@ $ git checkout gh-pages
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/nobe4/colorname.js/master/colorname.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+        $("#color").keyup(function() {
+            $("body").css('background-color', parseColor($("#color").val()));
+            log($("body").css('background-color'));
+        });
+    });
+    </script>
   </body>
 </html>
